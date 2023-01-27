@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+    Thomas Athanasiou at Hippiemonkeys
+    Copyright (c) 2023 Hippiemonkeys (https://hippiemonkeys.com)
+    Hippiemonkeys_ShippingTrackConsole
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Hippiemonkeys\ShippingTrackConsole\Console\Command\UpdatePickupLocations">
+        <arguments>
+            <argument name="name" xsi:type="string">hippiemonkeysshipping:updatepickuplocations</argument>
+            <argument name="description" xsi:type="string">Updates Pickup Locations based on the supported carriers (Web Services).</argument>
+        </arguments>
+    </type>
+    <type name="Hippiemonkeys\ShippingTrackConsole\Console\Command\UpdateShipmentTracksWithStatus">
+        <arguments>
+            <argument name="name" xsi:type="string">hippiemonkeysshipping:updateshipmenttracks</argument>
+            <argument name="description" xsi:type="string">Updates Shipment Tracks based on the supported carriers (Web Services).</argument>
+        </arguments>
+    </type>
+    <type name="Hippiemonkeys\ShippingTrackConsole\Console\Command\UpdateStatelessShipmentTracks">
+        <arguments>
+            <argument name="name" xsi:type="string">hippiemonkeysshipping:updatestatelessshipmenttracks</argument>
+            <argument name="description" xsi:type="string">Updates the Stateless Shipment Tracks based on the supported carriers (Web Services).</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="hippiemonkeysshippingtrack_updatepickuplocations" xsi:type="object">Hippiemonkeys\ShippingTrackConsole\Console\Command\UpdatePickupLocations</item>
+                <item name="hippiemonkeysshippingtrack_updateshipmenttracks" xsi:type="object">Hippiemonkeys\ShippingTrackConsole\Console\Command\UpdateShipmentTracksWithStatus</item>
+                <item name="hippiemonkeysshippingtrack_updatestatelessshipmenttracks" xsi:type="object">Hippiemonkeys\ShippingTrackConsole\Console\Command\UpdateStatelessShipmentTracks</item>
+             </argument>
+        </arguments>
+    </type>
+</config>
