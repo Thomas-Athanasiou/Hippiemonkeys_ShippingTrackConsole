@@ -14,7 +14,8 @@
 
     namespace Hippiemonkeys\ShippingTrackConsole\Console\Command;
 
-    use Psr\Log\LoggerInterface,
+    use Exception,
+        Psr\Log\LoggerInterface,
         Symfony\Component\Console\Command\Command as SymfonyCommand,
         Symfony\Component\Console\Input\InputInterface,
         Symfony\Component\Console\Output\OutputInterface,
@@ -74,7 +75,7 @@
                 $this->getState()->setAreaCode(Area::AREA_GLOBAL);
                 $result = $this->executeInternal($input, $output);
             }
-            catch (\Exception $exception)
+            catch (Exception $exception)
             {
                 $message = $exception->getMessage();
                 $this->getLogger()->error($message);
