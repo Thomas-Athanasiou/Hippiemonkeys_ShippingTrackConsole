@@ -1,4 +1,4 @@
-Copyright © 2023-present Hippiemonkeys Web Inteligence EE
+Copyright © 2023-present Hippiemonkeys Web Intelligence EE
 
 This file is part of Hippiemonkeys/ShippingTrackConsole.
 
